@@ -1,4 +1,17 @@
 const { body} = require('express-validator');
+const winston =require('winston');
+
+
+const logger = winston.createLogger({
+    level: 'error',
+    format: winston.format.json(),
+    transports: [
+      new winston.transports.File({ filename: 'error.log', level: 'error' }),
+    ],
+  });
+
+
+
 
 // error handling controller
 module.exports.errorHandling = (err, req, res, next) => {
@@ -12,7 +25,7 @@ module.exports.errorHandling = (err, req, res, next) => {
         statusCode = 404; // Unauthorized
       errorMessage = 'Item not found';
     }
-  
+     logger.error(err);
     // Send the error response
     res.status(statusCode).json({ message: errorMessage });
 
