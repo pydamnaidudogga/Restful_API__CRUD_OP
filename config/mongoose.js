@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const mongooseUrl = 'mongodb://127.0.0.1/crudIteams';
+// const mongooseUrl = 'mongodb://127.0.0.1/crudIteams';
+const mongooseUrl = 'mongodb+srv://pydamnaidu:kG35vdP7ZSQfqVno@database.cjh6ckr.mongodb.net/?retryWrites=true&w=majority'
 
 mongoose.set('strictQuery',false);
 
