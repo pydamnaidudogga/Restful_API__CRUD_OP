@@ -4,7 +4,7 @@
   "description": "restapi crud operations",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/pydamnaidudogga/Restful_API__CRUD_OP#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "express-validator": "^7.0.1",
     "mongoose": "^7.3.0",
     "nodemon": "^2.0.22"
   }
